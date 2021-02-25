@@ -1,3 +1,8 @@
+<?php
+    use App\Http\Controllers\ResaltadorDeCodigoController;
+    use App\Http\Controllers\CreadorDeHashController;
+?>
+
 <!DOCTYPE html>
 <html id="html" lang="es">
 @include('layouts.head')
@@ -17,21 +22,16 @@
                 </a>
 
                 <a href="{{ route('resaltador_de_codigo.form') }}" >
-                    <li class="<?php // ($listItemActive == ResaltadorDeCodigoController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
+                    <li class="<?= (isset($listItemActive)) && ($listItemActive == ResaltadorDeCodigoController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
                         &nbsp;<i class="fa fa-code"></i> &nbsp;Resaltador sintaxis PHP
                     </li>
                 </a>
                 <a href="{{ route('generador_de_hashes.form') }}" >
-                    <li class="<?php // ($listItemActive == CreadorDeHashController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
+                    <li class="<?= (isset($listItemActive)) && ($listItemActive == CreadorDeHashController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
                         &nbsp;<i class="fas fa-unlock"></i> &nbsp;Creador de hash
                     </li>
                 </a>
-                <a href="<?php // get_url(['contadordecaracteres']) ?>" >
-                    <li class="<?php // ($listItemActive == ContadorDeCaracteresController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
-                        &nbsp;<i class="fas fa-font"></i> &nbsp;Contador de caracteres
-                    </li>
-                </a>
-                <a href="<?php // get_url(['base64']) ?>" >
+                <a href="{{ route('base_64.form') }}" >
                     <li class="<?php // ($listItemActive == Base64Controller::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
                         &nbsp;<i class="fas fa-exchange-alt"></i> &nbsp;Base 64
                     </li>

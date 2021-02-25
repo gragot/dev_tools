@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 /**
  * Class ResaltadorDeCodigoPHPController
  */
@@ -12,7 +11,8 @@ class CreadorDeHashController extends Controller
 
     function creadorDeHashesForm() {
         return view('generador_de_hashes.form', [
-            'pass' => ''
+            'pass' => '',
+            'listItemActive' => self::LIST_ITEM_ACTIVE
         ]);
     }
 

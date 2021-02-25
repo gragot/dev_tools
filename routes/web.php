@@ -25,3 +25,20 @@ $router->post('/creador_de_hashes', [
 ]);
 
 
+$router->get('/base-64', [
+    'as' => 'base_64.form',
+    'uses' => 'Base64Controller@form'
+]);
+$router->post('/base-64/to-PDF', [
+    'as' => 'base_64.ToPDF',
+    'uses' => 'Base64Controller@base64ToPDF'
+]);
+$router->post('/base-64/to-base-64', [
+    'as' => 'base_64.ToBase64',
+    'uses' => 'Base64Controller@toBase64'
+]);
+$router->post('/base-64/to-text', [
+    'as' => 'base_64.toText',
+    'uses' => 'Base64Controller@base64toText'
+]);
+

@@ -11,7 +11,9 @@ class ResaltadorDeCodigoController extends Controller
     const LIST_ITEM_ACTIVE = 'ResaltadorDeCodigo';
 
     function resaltadorDeCodigoForm() {
-        return view('resaltador_de_codigo');
+        return view('resaltador_de_codigo', [
+            'listItemActive' => self::LIST_ITEM_ACTIVE
+        ]);
     }
 
     function resaltadorDeCodigoAction()
