@@ -20,12 +20,12 @@
             <ul id="menu-content" class="menu-content collapse out">
 
                 <a href="{{ route('welcome') }}">
-                    <li class="titulo-menu li-no-border-left">&nbsp;Online Tools</li>
+                    <li class="titulo-menu li-no-border-left">&nbsp;Dev Tools</li>
                 </a>
 
                 <a href="{{ route('resaltador_de_codigo.form') }}" >
                     <li class="<?= (isset($listItemActive)) && ($listItemActive == ResaltadorDeCodigoController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
-                        &nbsp;<i class="fa fa-code"></i> &nbsp;Resaltador sintaxis PHP
+                        &nbsp;<i class="fas fa-code"></i> &nbsp;Resaltador sintaxis PHP
                     </li>
                 </a>
                 <a href="{{ route('generador_de_hashes.form') }}" >
@@ -51,13 +51,9 @@
         @yield('contenido')
     </div>
 
-
-
-
 </div>
-<script src="http://localhost-proyectos/proyectos_personales/Tools/Repositorio/src/app/webroot/autoload/1 jquery/jquery-3.2.1.min.js"></script>
-
-<script src="http://localhost-proyectos/proyectos_personales/Tools/Repositorio/src/app/webroot/autoload/2 bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ url('js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ url('lib/bootstrap-4.6.0-dist/js/bootstrap.min.js') }}"></script>
 
 @yield('js')
 </body>
