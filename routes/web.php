@@ -24,7 +24,6 @@ $router->post('/creador_de_hashes', [
     'uses' => 'CreadorDeHashController@creadorDeHashesAction'
 ]);
 
-
 $router->get('/base-64', [
     'as' => 'base_64.form',
     'uses' => 'Base64Controller@form'
@@ -42,3 +41,11 @@ $router->post('/base-64/to-text', [
     'uses' => 'Base64Controller@base64toText'
 ]);
 
+$router->get('/informacion-de-archivo', [
+    'as' => 'infofile.form',
+    'uses' => 'InfoFileController@form'
+]);
+$router->post('/informacion-de-archivo', [
+    'as' => 'infofile.action',
+    'uses' => 'InfoFileController@getInfo'
+]);

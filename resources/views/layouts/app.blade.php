@@ -1,6 +1,7 @@
 <?php
     use App\Http\Controllers\ResaltadorDeCodigoController;
     use App\Http\Controllers\CreadorDeHashController;
+    use App\Http\Controllers\Base64Controller;
 ?>
 
 <!DOCTYPE html>
@@ -31,12 +32,12 @@
                         &nbsp;<i class="fas fa-unlock"></i> &nbsp;Creador de hash
                     </li>
                 </a>
-                <a href="{{ route('base_64.form') }}" >
-                    <li class="<?php // ($listItemActive == Base64Controller::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
+                <a href="{{ route('base_64.form') }}">
+                    <li class="<?= (isset($listItemActive)) && ($listItemActive == Base64Controller::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
                         &nbsp;<i class="fas fa-exchange-alt"></i> &nbsp;Base 64
                     </li>
                 </a>
-                <a href="<?php // get_url(['infofile']) ?>" >
+                <a href="{{ route('infofile.form') }}">
                     <li class="<?php // ($listItemActive == InfoFileController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
                         &nbsp;<i class="far fa-file"></i> &nbsp;Informacion de archivo
                     </li>
