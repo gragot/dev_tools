@@ -12,11 +12,11 @@
 
             <ul id="menu-content" class="menu-content collapse out">
 
-                <a href="<?= 'HOME_URL' ?>">
+                <a href="{{ route('welcome') }}">
                     <li class="titulo-menu li-no-border-left">&nbsp;Online Tools</li>
                 </a>
 
-                <a href="<?php // get_url(['resaltadordecodigo']) ?>" >
+                <a href="{{ route('resaltador_de_codigo.form') }}" >
                     <li class="<?php // ($listItemActive == ResaltadorDeCodigoController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
                         &nbsp;<i class="fa fa-code"></i> &nbsp;Resaltador sintaxis PHP
                     </li>
@@ -68,5 +68,7 @@
 <script src="http://localhost-proyectos/proyectos_personales/Tools/Repositorio/src/app/webroot/autoload/1 jquery/jquery-3.2.1.min.js"></script>
 
 <script src="http://localhost-proyectos/proyectos_personales/Tools/Repositorio/src/app/webroot/autoload/2 bootstrap/js/bootstrap.min.js"></script>
+
+@yield('js')
 </body>
 </html>
