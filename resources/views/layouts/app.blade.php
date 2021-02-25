@@ -21,7 +21,7 @@
                         &nbsp;<i class="fa fa-code"></i> &nbsp;Resaltador sintaxis PHP
                     </li>
                 </a>
-                <a href="<?php // get_url(['creadordehash']) ?>" >
+                <a href="{{ route('generador_de_hashes.form') }}" >
                     <li class="<?php // ($listItemActive == CreadorDeHashController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
                         &nbsp;<i class="fas fa-unlock"></i> &nbsp;Creador de hash
                     </li>
