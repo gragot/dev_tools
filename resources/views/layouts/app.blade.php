@@ -2,6 +2,7 @@
     use App\Http\Controllers\ResaltadorDeCodigoController;
     use App\Http\Controllers\CreadorDeHashController;
     use App\Http\Controllers\Base64Controller;
+    use App\Http\Controllers\InfoFileController;
 ?>
 
 <!DOCTYPE html>
@@ -38,22 +39,10 @@
                     </li>
                 </a>
                 <a href="{{ route('infofile.form') }}">
-                    <li class="<?php // ($listItemActive == InfoFileController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
+                    <li class="<?= (isset($listItemActive)) && ($listItemActive == InfoFileController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
                         &nbsp;<i class="far fa-file"></i> &nbsp;Informacion de archivo
                     </li>
                 </a>
-                <a href="<?php // get_url(['comparacionarchivos']) ?>" >
-                    <li class="<?php // ($listItemActive == ComparacionArchivosController::LIST_ITEM_ACTIVE) ? 'active' : null ?>">
-                        &nbsp;<i class="far fa-file"></i> &nbsp;Comparar archivos
-                    </li>
-                </a>
-
-
-
-                <!--<li class="menu-contacto li-no-border-left">
-                    &nbsp;<i class="fa fa-code fa-lg"></i> &nbsp;Contacto
-                </li>-->
-
             </ul>
         </div>
     </div>

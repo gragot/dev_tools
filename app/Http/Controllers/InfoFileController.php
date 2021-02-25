@@ -7,7 +7,9 @@ class InfoFileController extends Controller {
 	const LIST_ITEM_ACTIVE = 'InfoFile';
 
 	function form() {
-        return view('info_file.form');
+        return view('info_file.form', [
+            'listItemActive' => self::LIST_ITEM_ACTIVE
+        ]);
 	}
 
 	function getInfo()
